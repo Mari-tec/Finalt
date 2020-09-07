@@ -1,0 +1,137 @@
+<html>
+<head><script LANGUAGE="JavaScript">
+<!-- Begin
+function Round1()
+{
+Q1=prompt("Quén inventó la bombilla?","Tu respuesta aqui");
+if (Q1=="Thomas Edison")
+{
+alert("Correcto!")
+document.verify.Question2.value="Granted"
+}
+else
+{
+alert("Incorrecto! Prueba otra vez")
+}
+}
+function Round2()
+{
+Q2=prompt("En ciencia, H202 es una molecula de?","Tu respuesta aqui \(lower case\)")
+if (Q2=="Peroxido de hidrogeno")
+{
+alert("Correct!")
+document.verify.Question3.value="Granted"
+}
+else
+{
+alert("Incorrecto! Prueba otra vez")
+}
+}
+function Round3()
+{
+Q3=prompt("¿Qué estado tiene la frontera del mar más larga?","Tu respuesta aqui")
+if (Q3=="Alaska")
+{
+alert("Correct!")
+document.verify.Question4.value="Granted"
+}
+else
+{
+alert("Incorrecto! Prueba otra vez")
+}
+}
+function Round4()
+{
+Q4=prompt("La teoría E=MC2 fue espuesta por quien?","Tu respuesta aqui")
+if (Q4=="Albert Einstein")
+{
+alert("Correcto!")
+document.verify.Question5.value="Granted"
+}
+else
+{
+alert("Incorrecto! Prueba otra vez")
+}
+}
+function Round5()
+{
+Q3=prompt("¿Cuánto son 12 al tercer poder? ¡No uses una calculadora!","Tu respuesta aqui \(no incluyas comas\)")
+if (Q3=="1728")
+{
+alert("Correcto!")
+alert("Has contestado todas las preguntas correctamente! Felicidades! \n\n\n\n\n\n\n\n\n ")
+alert("Gracias por jugar!")
+}
+else
+{
+alert("Incorrecto! Prueba otra vez")
+}
+}
+function PendRound2()
+{
+if (document.verify.Question2.value=="Granted")
+{
+Round2()
+}
+if (document.verify.Question2.value=="Denied")
+{
+alert("Debes contestar primero las otras preguntas para pasar a esta ronda")
+}
+}
+function PendRound3()
+{
+if (document.verify.Question3.value=="Granted")
+{
+Round3()
+}
+if (document.verify.Question3.value=="Denied")
+{
+alert("Debes contestar primero las otras preguntas para pasar a esta ronda")
+}
+}
+function PendRound4()
+{
+if (document.verify.Question4.value=="Granted")
+{
+Round4()
+}
+if (document.verify.Question4.value=="Denied")
+{
+alert("Debes contestar primero las otras preguntas para pasar a esta ronda")
+}
+}
+function PendRound5()
+{
+if (document.verify.Question5.value=="Granted")
+{
+Round5()
+}
+if (document.verify.Question5.value=="Denied")
+{
+alert("Debes contestar primero las otras preguntas para pasar a esta ronda")
+}
+}
+// End -->
+</script>
+
+<title></title>
+</head>
+
+<body>
+
+<form name="verify">
+<input type="hidden" name="Question2" value="Denied"><input type="hidden" name="Question3"
+value="Denied"><input type="hidden" name="Question4" value="Denied"><input type="hidden"
+name="Question5" value="Denied">
+</form>
+
+<p><input type="button" value="Ronda 1" name="R1"
+style="color: #0000FF; font-family: Courier New" onClick="Round1()"> <input type="button"
+value="Ronda 2" name="R3" style="color: #0000FF; font-family: Courier New"
+onClick="PendRound2()"> <input type="button" value="Ronda 3" name="R3"
+style="color: #0000FF; font-family: Courier New" onClick="PendRound3()"> <input
+type="button" value="Round 4" name="R4" style="color: #0000FF; font-family: Courier New"
+onClick="PendRound4()"> <input type="button" value="Ronda 5" name="R5"
+style="color: #0000FF; font-family: Courier New" onClick="PendRound5()"> </p>
+</body>
+</html>
